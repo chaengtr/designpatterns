@@ -1,29 +1,30 @@
-package factory;
+package factory_pattern;
 
 import ducks.DuckCall;
 import ducks.MallardDuck;
 import ducks.RedheadDuck;
 import ducks.RubberDuck;
+import quack.QuackCounter;
 import quack.Quackable;
 
-public class DuckFactory extends AbstractDuckFactory {
+public class CountingDuckFactory extends AbstractDuckFactory {
     @Override
     public Quackable createMallardDuck() {
-        return new MallardDuck();
+        return new QuackCounter(new MallardDuck());
     }
 
     @Override
     public Quackable createRedheadDuck() {
-        return new RedheadDuck();
+        return new QuackCounter(new RedheadDuck());
     }
 
     @Override
     public Quackable createDuckCall() {
-        return new DuckCall();
+        return new QuackCounter(new DuckCall());
     }
 
     @Override
     public Quackable createRubberDuck() {
-        return new RubberDuck();
+        return new QuackCounter(new RubberDuck());
     }
 }

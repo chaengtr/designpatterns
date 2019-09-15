@@ -1,7 +1,7 @@
 package simulator;
 
-import factory.AbstractDuckFactory;
-import factory.CountingDuckFactory;
+import factory_pattern.AbstractDuckFactory;
+import factory_pattern.CountingDuckFactory;
 import goose.Goose;
 import goose.GooseAdapter;
 import pigeon.Pigeon;

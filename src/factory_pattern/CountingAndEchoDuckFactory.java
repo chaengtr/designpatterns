@@ -1,4 +1,4 @@
-package factory;
+package factory_pattern;
 
 import ducks.DuckCall;
 import ducks.MallardDuck;

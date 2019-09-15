@@ -1,7 +1,7 @@
 package simulator;
 
-import factory.AbstractDuckFactory;
-import factory.DuckFactory;
+import factory_pattern.AbstractDuckFactory;
+import factory_pattern.DuckFactory;
 import goose.Goose;
 import goose.GooseAdapter;
 import pigeon.Pigeon;
@@ -23,7 +23,7 @@ public class DuckSimulatorFactory {
         Quackable duckCall = new QuackCounter(duckFactory.createDuckCall());
         Quackable rubberDuck = new QuackCounter(duckFactory.createRubberDuck());
         Quackable gooseDuck = new GooseAdapter(new Goose());
-        Quackable pigeon = new PigeonAdapter(new Pigeon());
+        Quackable pigeonDuck = new PigeonAdapter(new Pigeon());
 
         System.out.println("\nDuck Simulator: With Abstract Factory (No Decorator)");
         simulate(mallardDuck);
@@ -31,7 +31,7 @@ public class DuckSimulatorFactory {
         simulate(duckCall);
         simulate(rubberDuck);
         simulate(gooseDuck);
-        simulate(pigeon);
+        simulate(pigeonDuck);
         System.out.println("The ducks quacked " + QuackCounter.getNumberOfQuacks() + " times");
     }
 
